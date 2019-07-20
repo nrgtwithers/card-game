@@ -1,10 +1,9 @@
 import React from "react";
-import "./style.css";
 
 // Card Shown
 function PlayingCard(props) {
   return (
-      <div>
+      <div className="playing-card">
           <img src={props.image} alt={props.id}/>
       </div>
 );

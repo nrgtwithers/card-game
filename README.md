@@ -11,11 +11,10 @@ Coding Challenge created for Dynamo Technologies. It's a simple app that has 52 
 
 1. Clone the master branch of this repo
 1. Open the folder and run:
-```
 
+```
 npm i
 npm start
-
 ```
 1. Open the app and take a look around!
 

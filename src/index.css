@@ -11,11 +11,38 @@ html, body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* Container */
+
+.container{
+  margin-top: 100px;
+  margin: auto;
+  text-align: center;
+}
+
+/* Game */
+
+div.header {
+  margin-top: 50px !important;
+}
+
 h1{
   font-family: 'Fascinate', cursive;
-
+  text-shadow: 2px 2px darkslategrey;
+  font-size: 50px;
 }
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+
+/* Playing Card */
+
+img {
+  width: 150px;
+  border-radius: 10px;
+}
+
+div.playing-card{
+  margin: 40px;
+}
+
+/* Button */
+button.btn.btn-warning, button.btn.btn-danger {
+  margin: 15px;
 }
