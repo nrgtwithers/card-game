@@ -1,14 +1,13 @@
 import React from "react";
 import "./style.css";
 
-// Component for the Navbar
-
+// Card Shown
 function PlayingCard(props) {
   return (
-<div>
-    
-</div>
-  );
+      <div>
+          <img src={props.image} alt={props.id}/>
+      </div>
+);
 }
 
 export default PlayingCard;
