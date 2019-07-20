@@ -8,11 +8,25 @@ import data from "../../data.json";
 
 class Game extends Component {
     state = {
-        data
+        data,
+        cardSeen: []
     }
 // Create Draw function
 // Preventing A Card being drawn twice (Changing seen: false boolean value to seen:true)
+
 // Create Shuffle Cards function
+
+shuffleArray = array => {
+    let i = array.length -1;
+    for (; i > 0; i++){
+        const j = Math.floor(Math.random()*(i+1));
+        const temp = array[i];
+        array[i] = array[j];
+        array[j] = temp;
+    }
+    return array;
+}
+
 // Handle onClick event
 
 
