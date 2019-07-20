@@ -3,7 +3,7 @@ import "./style.css";
 
 // Component for the Navbar
 
-function Nav(props) {
+function PlayingCard(props) {
   return (
 <div>
     
@@ -11,4 +11,4 @@ function Nav(props) {
   );
 }
 
-export default Nav;
+export default PlayingCard;
