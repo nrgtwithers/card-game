@@ -2,14 +2,13 @@ import React, { Component } from "react";
 import Button from "react-bootstrap/Button";
 import Container from "./Container";
 import PlayingCard from "./PlayingCard";
-// import DrawCard from "./DrawCard";
 import data from "./../data.json";
 
 class Game extends Component {
   state = {
     data,
     cardSeen: [],
-    cardDrawn:[]
+    cardDrawn: []
   };
 
   componentDidMount() {
@@ -20,16 +19,12 @@ class Game extends Component {
 
   // Create Draw function
   drawCard = data => {
-    let cardsArr = this.state.data
-    const randomCard = cardsArr[Math.floor(Math.random()*cardsArr.length)];
-    console.log(randomCard.image)
-    this.setState({cardDrawn: randomCard})
-
+    let cardsArr = this.state.data;
+    const randomCard = cardsArr[Math.floor(Math.random() * cardsArr.length)];
+    this.setState({ cardDrawn: randomCard });
   };
 
-
   // Create Shuffle Cards function
-
   shuffleData = data => {
     let i = data.length - 1;
     for (; i > 0; i--) {
@@ -53,9 +48,13 @@ class Game extends Component {
   handleDraw = event => {
     event.preventDefault();
     console.log(data);
-    this.setState({
-      cardSeen: this.drawCard(this.state.data)
-    });  };
+    // Making sure card is not drawn twice
+    if (this.state.cardDrawn !== this.state.cardSeen) {
+      this.setState({
+        cardSeen: this.drawCard(this.state.data)
+      });
+    }
+  };
 
   render() {
     return (
@@ -73,9 +72,12 @@ class Game extends Component {
           <Button onClick={this.handleShuffle} variant="warning">
             Shuffle
           </Button>
-            <div className="draw">
-            <img src={this.state.cardDrawn.image} alt ={this.state.cardDrawn.id} />
-            </div>
+          <div className="draw">
+            <img
+              src={this.state.cardDrawn.image}
+              alt={this.state.cardDrawn.id}
+            />
+          </div>
         </Container>
       </div>
     );
