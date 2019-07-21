@@ -1,6 +1,6 @@
 # Playing Cards
 
-Coding Challenge created for Dynamo Technologies. It's a simple app that has 52 standard playing cards. That has two functionalities with two buttons draw & shuffle.
+Coding Challenge created for Dynamo Technologies. It's a simple jeroku deployed app that has 52 standard playing cards. That has two functionalities with two buttons draw & shuffle. Play the live demo [here.](https://damp-dawn-16819.herokuapp.com/)
 
 ## Functionalities
 
