@@ -24,8 +24,8 @@ class Game extends Component {
     const randomCard = cardsArr[Math.floor(Math.random()*cardsArr.length)];
     console.log(randomCard.image)
     this.setState({cardDrawn: randomCard})
-    // const cardSeenArr = cardsArr.filter(card=>card.index !==randomCard.index)
-    // this.setState({cardsArr: cardSeenArr})
+    const cardSeenArr = cardsArr.filter(card=>card.index !==randomCard.index)
+    this.setState({cardsArr: cardSeenArr})
 
     // let cardDrawn = this.state.cardDrawn
   };
@@ -56,8 +56,9 @@ class Game extends Component {
   handleDraw = event => {
     event.preventDefault();
     console.log(data);
-    // this.setState({ data: this.drawCard(this.state.data) });
-  };
+    this.setState({
+      cardSeen: this.drawCard(this.state.data)
+    });  };
 
   render() {
     return (
